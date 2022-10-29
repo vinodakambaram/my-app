@@ -1,0 +1,25 @@
+.parent{
+    height: 100vh;
+    width: 100vw;
+    background-color: gray;
+    display: flex;
+}
+.left{
+    height: 30%;
+    width: 30%;
+    background-color: blue;
+}
+.right1{
+    height: 30%;
+    width: 30%;
+    background-color: black;
+    justify-content: flex-end;
+    position: absolute;
+    margin-left: 50%;
+
+}
+.right2{
+    height: 30%;
+    width: 30%;
+    background-color:green;
+}

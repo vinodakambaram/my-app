@@ -1,0 +1,22 @@
+<input type="text" placeholder="search">
+<button>filter</button>
+<table class="table table-dark">
+    <thead>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let vehicle  of vehicles">
+            <td>{{ vehicles.Vehicle }}</td>
+            <td>{{ vehicles.manufacturer }}</td>
+            <td>{{ vehicles.model }}</td>
+            <td>{{ vehicles.type }}</td>
+            <td>{{ vehicles.fuel}}</td>
+            <td>{{ vehicles.color}}</td>
+            <td>
+                <img src="{{vehicles.image}}" height="100px" width="100px">
+            </td>
+            <td>{{ vehicles.id  }}</td>
+        </tr>
+
+    </tbody>
+</table>

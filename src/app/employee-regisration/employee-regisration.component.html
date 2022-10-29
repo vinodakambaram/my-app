@@ -1,0 +1,45 @@
+<h1>Employee Registration</h1>
+<label>Name:</label>
+<input type="text" [(ngModel)]="name">
+<br>
+
+<label>age:</label>
+<input type="number" [(ngModel)]="age">
+<br>
+
+<label>company:</label>
+<input type="text" [(ngModel)]="company">
+<br>
+
+<label>package:</label>
+<input type="number" [(ngModel)]="package">
+<br>
+
+<button (click)="register()" style="color:white; background-color: blue;">Register</button>
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>S.No</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Company</th>
+            <th>Package</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees;let i=index">
+          <td>{{ i+1 }}</td>  
+         <td>{{ employee.name}}</td>
+         <td 
+         [ngStyle]="{'color':employee.age >=25 ? 'yellow': 'orange'}"
+         [ngClass]="{'yellow':employee.package >=10,'gray':employee.package < 10}"   
+            >{{ employee.age | age}}</td>
+         <td>{{ employee.company | uppercase}}</td>
+         <td [ngStyle]="{'color':employee.package >=10 ? 'green' : 'red'}">{{employee.package | package}}</td>
+         <td>
+            <button class=" btn btn-danger" (click)="delete(i)">delete</button>
+         </td>
+       </tr> 
+    </tbody>
+</table>
