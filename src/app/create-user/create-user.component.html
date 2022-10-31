@@ -1,0 +1,27 @@
+<h1>create user form</h1>
+<form [formGroup]="userForm">
+
+  <label>Name:</label>
+  <input type="text" formControlName="name"><br>
+
+  <label>phone:</label>
+  <input type="number" formControlName="phone"><br>
+
+  <label>dob:</label>
+  <input type="date" formControlName="dob">
+
+  <h2>address</h2>
+  <div formGroupName="address">
+
+    <label>City:</label>
+    <input type="text" formControlName="city"><br>
+
+    <label>pin:</label>
+    <input type="number" formControlName="pin"><br>
+
+
+  </div>
+
+  <button (click)="submit()">submit</button>
+
+</form>  

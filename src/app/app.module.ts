@@ -33,6 +33,7 @@ import { GmailComponent } from './gmail/gmail.component';
 import { BankDetailsComponent } from './bank-details/bank-details.component';
 import { BikesComponent } from './bikes/bikes.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 
 @NgModule({
@@ -65,7 +66,8 @@ import { CreateAccountComponent } from './create-account/create-account.componen
     GmailComponent,
     BankDetailsComponent,
     BikesComponent,
-    CreateAccountComponent
+    CreateAccountComponent,
+    CreateUserComponent
 
   ],
   imports: [
